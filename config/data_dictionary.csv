@@ -1,0 +1,18 @@
+field,type,role,description,expected_range_or_values
+loan_id,string,key,Synthetic loan identifier,unique non-null
+origination_date,date,time,Origination and model scoring date,2018-01-01 to 2022-12-31
+performance_window_end,date,time,End of complete 12-month outcome window observable by the fixed 2023-12-31 data-as-of date,origination date plus 12 months
+split,string,partition,Chronological model partition,train|validation|oot
+fico_score,float,predictor,Credit score available at origination,300 to 850
+ltv,float,predictor,Original loan-to-value ratio in percent,20 to 150
+dti,float,predictor,Debt-to-income ratio in percent,0 to 80
+loan_amount,float,predictor,Original principal balance in USD,25000 to 1500000
+interest_rate,float,predictor,Note rate in percent,0 to 25
+rate_spread,float,predictor,Rate premium proxy in percentage points,-1 to 10
+loan_purpose,string,predictor,Origination purpose,purchase|rate_term_refi|cash_out_refi
+occupancy_status,string,predictor,Occupancy at origination,owner|second_home|investor
+prior_delinquency,int,predictor,Prior delinquency indicator,0|1
+state,string,predictor,Synthetic geography,IL|WI|OTHER
+unemployment_rate,float,predictor,Synthetic contemporaneous unemployment rate,2 to 15
+hpi_yoy_change,float,predictor,Synthetic annual house-price change in percent,-20 to 25
+default_12m,int,target,Synthetic 90+ DPD foreclosure or charge-off within 12 months,0|1

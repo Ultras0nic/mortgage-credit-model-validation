@@ -1,0 +1,9 @@
+area,control,evidence,status
+Purpose and use,Target intended use limitations and prohibited uses are documented,README and validation memo,COMPLETE
+Conceptual soundness,Logistic regression assumptions and expected risk directions are challenged,coefficient_table.csv and sensitivity.csv,COMPLETE
+Data and lineage,Synthetic seed schema chronological splits and outcome window are documented,src/mortgage_validation/data.py data_dictionary.csv and dq_results.csv,COMPLETE
+Implementation,One command reproduces all evidence and automated tests pass,pipeline run and tests,COMPLETE
+Outcomes analysis,Discrimination calibration and backtesting are assessed against explicit criteria,metrics.csv calibration_deciles.csv backtest_quarterly.csv and acceptance_results.csv,COMPLETE
+Benchmarking,Independent challenger uses identical OOT sample inputs and metrics,model_comparison.csv,COMPLETE
+Stability,Key driver and score PSI are evaluated against watch and material triggers,psi.csv,COMPLETE
+Governance,Findings contain criteria value-specific evidence owners actions and closure requirements,findings.csv and validation memo,COMPLETE

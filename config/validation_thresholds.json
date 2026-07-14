@@ -1,0 +1,22 @@
+{
+  "disclaimer": "Illustrative portfolio thresholds; not FHLBank Chicago policy or risk appetite.",
+  "auc_min": 0.70,
+  "auc_degradation_max": 0.05,
+  "auc_unsatisfactory_below": 0.60,
+  "gini_min": 0.40,
+  "ks_min": 0.25,
+  "ks_unsatisfactory_below": 0.10,
+  "oe_min": 0.80,
+  "oe_max": 1.20,
+  "calibration_intercept_abs_max": 0.20,
+  "calibration_slope_min": 0.80,
+  "calibration_slope_max": 1.20,
+  "ece_max": 0.03,
+  "backtest_interval_coverage_min": 0.80,
+  "backtest_min_expected_defaults": 20,
+  "oot_defaults_min": 200,
+  "psi_watch": 0.10,
+  "psi_material": 0.25,
+  "challenger_auc_delta_material": 0.02,
+  "challenger_brier_improvement_material": 0.10
+}

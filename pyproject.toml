@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mortgage-credit-model-validation"
+version = "0.1.0"
+description = "Synthetic mortgage PD model validation case study"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<3",
+  "scikit-learn>=1.5,<2",
+  "matplotlib>=3.9,<4",
+  "joblib>=1.4,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "packaging>=24,<26"]
+
+[project.scripts]
+run-validation = "mortgage_validation.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

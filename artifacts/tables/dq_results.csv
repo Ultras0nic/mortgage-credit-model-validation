@@ -1,0 +1,8 @@
+check,failed_rows,status
+duplicate_loan_id,0,PASS
+missing_critical,0,PASS
+missing_model_input,0,PASS
+invalid_target,0,PASS
+invalid_ranges,0,PASS
+invalid_categories,0,PASS
+incomplete_outcome_window,0,PASS

@@ -1,0 +1,17 @@
+criterion_id,area,criterion,observed,threshold,status,evidence
+DQ-01,Data quality,All critical SQL checks pass,7/7 PASS,All PASS,PASS,dq_results.csv
+SMP-01,Sample sufficiency,OOT sample has sufficient defaults,371,>= 200,PASS,metrics.csv: oot defaults
+DIS-01,Discrimination,OOT AUC meets minimum,0.8047,>= 0.70,PASS,metrics.csv: oot auc
+DIS-02,Discrimination,OOT Gini meets minimum,0.6095,>= 0.40,PASS,metrics.csv: oot gini
+DIS-03,Discrimination,OOT KS meets minimum,0.4556,>= 0.25,PASS,metrics.csv: oot ks
+DIS-04,Discrimination,Validation-to-OOT AUC degradation is within limit,-0.0136,<= 0.05,PASS,metrics.csv: validation and oot auc
+CAL-01,Calibration,Brier score beats prevalence-only benchmark,0.0690 vs 0.0826,Brier < null Brier,PASS,metrics.csv: oot brier and brier_null
+CAL-02,Calibration,Overall observed/expected ratio is in range,1.1280,0.80 to 1.20,PASS,metrics.csv: oot oe_ratio
+CAL-03,Calibration,Absolute calibration intercept is within limit,0.3451,abs <= 0.20,FAIL,metrics.csv: oot calibration_intercept
+CAL-04,Calibration,Calibration slope is in range,1.0958,0.80 to 1.20,PASS,metrics.csv: oot calibration_slope
+CAL-05,Calibration,Expected calibration error is within limit,0.0133,<= 0.03,PASS,calibration_deciles.csv
+BT-01,Backtesting,Adequate quarterly buckets fall within approximate conditional 95% expected-default intervals,100.0%,>= 80%,PASS,backtest_quarterly.csv
+SEN-01,Sensitivity,All documented adverse shocks increase mean PD,6/6 pass,All pass,PASS,sensitivity.csv
+BMK-01,Benchmarking,Challenger does not materially outperform champion,AUC delta -0.0516; Brier improvement -9.1%,AUC delta < 0.02 and Brier improvement < 10%,PASS,model_comparison.csv
+DRF-01,Stability,Score PSI is below material threshold,0.3383,<= 0.25,FAIL,psi.csv: predicted_pd
+DRF-02,Stability,No monitored feature has material PSI,4 material,0 material,FAIL,psi.csv

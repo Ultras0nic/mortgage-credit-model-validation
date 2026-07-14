@@ -1,0 +1,24 @@
+{
+  "conclusion": "Satisfactory with limitations",
+  "oot_auc": 0.8047360682316638,
+  "oot_ks": 0.4556279365466429,
+  "oot_observed_rate": 0.09082007343941248,
+  "oot_predicted_rate": 0.08051651334051294,
+  "oot_oe_ratio": 1.1279682846588834,
+  "oot_ece": 0.013324643005355612,
+  "backtest_interval_coverage": 1.0,
+  "material_psi_features": [
+    "interest_rate",
+    "unemployment_rate",
+    "hpi_yoy_change",
+    "predicted_pd"
+  ],
+  "acceptance_failures": [
+    "CAL-03",
+    "DRF-01",
+    "DRF-02"
+  ],
+  "high_findings": 0,
+  "moderate_findings": 2,
+  "disclaimer": "Illustrative portfolio thresholds; not FHLBank Chicago policy or risk appetite."
+}

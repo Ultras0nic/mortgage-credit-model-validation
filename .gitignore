@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.deps/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+data/generated/
+artifacts/model/
+
+!data/generated/.gitkeep
+!artifacts/model/.gitkeep
